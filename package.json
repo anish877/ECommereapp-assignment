@@ -12,6 +12,7 @@
     "aos": "^2.3.4",
     "axios": "^1.7.9",
     "canvas-confetti": "^1.9.3",
+    "dotenv": "^16.4.7",
     "framer-motion": "^11.13.5",
     "lucide-react": "^0.468.0",
     "react": "^18.3.1",

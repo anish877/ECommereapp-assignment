@@ -224,7 +224,7 @@ const ProfessionalNavbar = () => {
                           Sign Up
                         </Link>
                         <Link
-                          to="/admin"
+                          to="/admin-verification"
                           className="block px-4 py-2 hover:bg-pink-50 transition"
                         >
                           Seller
