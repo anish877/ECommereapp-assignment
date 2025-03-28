@@ -30,7 +30,7 @@ const ProductDetail = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`https://ecommercebackend-8gx8.onrender.com/product/${productId}`);
+        const response = await fetch(`https://ecommerse-assingment-backend.onrender.com/product/${productId}`);
         const data = await response.json();
         if (data.success) {
           setProduct(data.product);
@@ -86,7 +86,7 @@ const ProductDetail = () => {
     }
 
     try {
-      const response = await fetch('https://ecommercebackend-8gx8.onrender.com/add-to-cart', {
+      const response = await fetch('https://ecommerse-assingment-backend.onrender.com/add-to-cart', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

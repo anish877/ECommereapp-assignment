@@ -26,7 +26,7 @@ const ProfessionalNavbar = () => {
       var total = 0
       const userId = sessionStorage.getItem('userId');
       if (!userId) return;
-      const cartResponse = await fetch(`https://ecommercebackend-8gx8.onrender.com/cart/${userId}`);
+      const cartResponse = await fetch(`https://ecommerse-assingment-backend.onrender.com/cart/${userId}`);
       const cartData = await cartResponse.json()
       cartData.cart?.forEach(item => {
         total = total + item.productQty
@@ -65,7 +65,7 @@ const ProfessionalNavbar = () => {
       const userId = sessionStorage.getItem("userId");
       if (userId) {
         try {
-          const response = await fetch(`https://ecommercebackend-8gx8.onrender.com/auth/user/${userId}`);
+          const response = await fetch(`https://ecommerse-assingment-backend.onrender.com/auth/user/${userId}`);
           const data = await response.json();
           setUserName(data.name);
         } catch (error) {

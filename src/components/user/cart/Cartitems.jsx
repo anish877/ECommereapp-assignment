@@ -28,7 +28,7 @@ const CartItems = () => {
       }
 
       try {
-        const cartResponse = await fetch(`https://ecommercebackend-8gx8.onrender.com/cart/${userId}`);
+        const cartResponse = await fetch(`https://ecommerse-assingment-backend.onrender.com/cart/${userId}`);
         const cartData = await cartResponse.json();
 
         if (!cartData.success) {
@@ -50,7 +50,7 @@ const CartItems = () => {
         }, {});
 
         const productPromises = Object.values(groupedItems).map(async (item) => {
-          const productResponse = await fetch(`https://ecommercebackend-8gx8.onrender.com/product/${item.productId}`);
+          const productResponse = await fetch(`https://ecommerse-assingment-backend.onrender.com/product/${item.productId}`);
           const productData = await productResponse.json();
           
           if (productData.success) {
@@ -83,7 +83,7 @@ const CartItems = () => {
     if (newQuantity >= 1) {
       try {
         const userId = sessionStorage.getItem('userId');
-        const response = await fetch('https://ecommercebackend-8gx8.onrender.com/update-quantity', {
+        const response = await fetch('https://ecommerse-assingment-backend.onrender.com/update-quantity', {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json'
@@ -114,7 +114,7 @@ const CartItems = () => {
   const handleRemoveItem = async (itemId) => {
     try {
       const userId = sessionStorage.getItem('userId');
-      const response = await fetch('https://ecommercebackend-8gx8.onrender.com/delete-items', {
+      const response = await fetch('https://ecommerse-assingment-backend.onrender.com/delete-items', {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json'
